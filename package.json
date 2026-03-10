@@ -9,12 +9,14 @@
     "test": "ng test"
   },
   "private": true,
-  "packageManager": "npm@11.9.0",
+  "packageManager": "pnpm@10.31.0+sha512.e3927388bfaa8078ceb79b748ffc1e8274e84d75163e67bc22e06c0d3aed43dd153151cbf11d7f8301ff4acb98c68bdc5cadf6989532801ffafe3b3e4a63c268",
   "dependencies": {
+    "@angular/cdk": "21.2.1",
     "@angular/common": "^21.2.0",
     "@angular/compiler": "^21.2.0",
     "@angular/core": "^21.2.0",
     "@angular/forms": "^21.2.0",
+    "@angular/material": "21.2.1",
     "@angular/platform-browser": "^21.2.0",
     "@angular/router": "^21.2.0",
     "rxjs": "~7.8.0",

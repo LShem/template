@@ -1,0 +1,11 @@
+<h2 mat-dialog-title>{{ this.data.title }}</h2>
+<mat-dialog-content class="mat-typography" [style.padding-bottom]="'15px'">
+  <ng-container 
+    [ngTemplateOutlet]="this.data.contentRef" 
+    [ngTemplateOutletContext]="{ $implicit: this.data.context}">
+  </ng-container>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button focus mat-button (click)="onCancel()">Cancel</button>
+  <button mat-button (click)="onConfirm()">Confirm</button>
+</mat-dialog-actions>
