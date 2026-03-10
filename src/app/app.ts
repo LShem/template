@@ -2,10 +2,9 @@ import { Component, Directive, inject, input, TemplateRef, viewChild } from '@an
 import { MatButton } from '@angular/material/button';
 import { DialogService } from './services/dialog.service';
 import { TypedContextDirective } from './directives/typed-context.directive';
+import { TemplateContext, templateContextType } from './dialogs/confirm-dialog.component';
 
-interface DocumentContext {
-  $implicit: Document;
-}
+type DocumentContext = TemplateContext<Document>;
 
 interface Document {
   name: string
@@ -20,7 +19,7 @@ interface Document {
 export class App {
   readonly #dialogService = inject(DialogService);
 
-  protected readonly typedContext!: DocumentContext;
+  protected readonly typedContext = templateContextType<DocumentContext>();
 
   protected readonly contentRef = viewChild.required<TemplateRef<DocumentContext>>('contentRef');
 
